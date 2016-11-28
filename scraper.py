@@ -2,8 +2,8 @@ from pony.orm import commit, select, db_session, desc
 from steemtools.blockchain import Blockchain
 from steemtools.helpers import read_asset
 
-from steemsql.helpers import scrape_with_progress
-from steemsql.models import *
+from helpers import scrape_with_progress
+from models import *
 
 # initialize the db
 db.bind('sqlite', ':memory:', create_db=True)
