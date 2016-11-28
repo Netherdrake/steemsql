@@ -18,3 +18,15 @@ class Transfer(db.Entity):
     timestamp = Optional(datetime)
     block_id = Optional(int)
     meta = Optional(Json)
+
+
+class Account(db.Entity):
+    _table_ = 'Accounts'
+    id = PrimaryKey(int, auto=True)
+
+    name = Required(str)
+    info = Required(Json)
+
+    sp = Optional(float)
+    rep = Optional(float)
+
